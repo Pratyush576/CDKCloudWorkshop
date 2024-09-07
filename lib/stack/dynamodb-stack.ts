@@ -12,6 +12,8 @@ export class CdkWorkshopDDBStack extends Stack {
         name: "id",
         type: ddb.AttributeType.STRING
       },
+      billingMode: ddb.BillingMode.PAY_PER_REQUEST, // On-Demand Capacity
+      // No need to specify readCapacity or writeCapacity
     })
 
   }
